@@ -1,11 +1,10 @@
 extends Node2D
 
+onready var objects = [
+	$External,
+	$Internal,
+]
 
-func _on_External_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+func _on_object_input_event(_viewport: Node, event: InputEvent, _shape_idx: int, object_id: int) -> void:
 	if event is InputEventMouseButton and event.pressed:
-		print("tik!")
-
-
-func _on_Internal_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if event is InputEventMouseButton and event.pressed:
-		print("tok!")
+		print("object %d selected" % object_id)
