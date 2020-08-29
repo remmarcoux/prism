@@ -54,6 +54,10 @@ ui_down={
  ]
 }
 
+[autoload]
+
+Progress="*res://system/progress.gd"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
