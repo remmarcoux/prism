@@ -23,3 +23,10 @@ func run_to_next_message() -> void:
 		run_to_next_message()
 	else:
 		message_box.display_text(event)
+
+
+func _on_Box_next_message_requested() -> void:
+	if dialog.next():
+		run_to_next_message()
+	else:
+		emit_signal("finished")
