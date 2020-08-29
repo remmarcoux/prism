@@ -1,0 +1,7 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Dialog/Dialog.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+events = [ "#left:Dialog/left dude.png", "#right:Dialog/right person.png", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac nulla eget magna cursus pretium. Sed sollicitudin lacinia metus non tincidunt. Vestibulum a viverra eros. Donec purus neque, fermentum id tortor ut, porttitor pretium eros. Ut porta placerat placerat. Phasellus non malesuada tortor. Etiam imperdiet nibh at purus posuere laoreet. Mauris tempus augue in sapien pretium dictum.", "[color=lime]Donec a nisl a purus placerat mollis. Donec eu consequat risus, viverra blandit massa. Nunc nec interdum mi. Pellentesque posuere tempor augue, nec pretium enim molestie nec. Pellentesque tincidunt, diam fringilla pulvinar aliquam, quam nisi ornare massa, ac commodo turpis enim sed nulla. Nunc a augue accumsan, dignissim metus in, vulputate justo. Donec interdum metus ante, non gravida risus pellentesque nec. Mauris hendrerit sit amet metus ac pellentesque. Phasellus facilisis, elit non cursus venenatis, libero odio hendrerit dui, vel molestie eros nisl interdum ex. Proin ut elit eleifend, hendrerit mauris ut, rhoncus felis.[/color]" ]

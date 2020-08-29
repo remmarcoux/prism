@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Dialog/Conversation.gd" type="Script" id=1]
+[ext_resource path="res://Dialog/MessageBox.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Dialog/Test.tres" type="Resource" id=3]
+
+[node name="Conversation" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+dialog = ExtResource( 3 )
+
+[node name="Left" type="Sprite" parent="."]
+position = Vector2( 256, 192 )
+
+[node name="Right" type="Sprite" parent="."]
+position = Vector2( 768, 192 )
+
+[node name="Box" parent="." instance=ExtResource( 2 )]
+anchor_top = 0.6
+[connection signal="next_message_requested" from="Box" to="." method="_on_Box_next_message_requested"]
