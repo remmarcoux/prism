@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/progressive_intro_FINAL_02.wav-731606c1f626a74b7ed210b45331af32.sample"
+
+[deps]
+
+source_file="res://Audio/Music/progressive_intro_FINAL_02.wav"
+dest_files=[ "res://.import/progressive_intro_FINAL_02.wav-731606c1f626a74b7ed210b45331af32.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

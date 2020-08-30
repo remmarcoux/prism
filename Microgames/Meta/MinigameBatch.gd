@@ -1,10 +1,12 @@
 extends Node
 
+export (AudioStream) var music
 export(Array, PackedScene) var gameList : Array
 
 var index = 0
 
 func _ready():
+	AudioManager.play_music(music, AudioManager.ELoopType.LoopLast)
 	load_game()
 
 func load_game():

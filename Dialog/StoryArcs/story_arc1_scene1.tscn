@@ -5,6 +5,3 @@
 
 [node name="Conversation" instance=ExtResource( 1 )]
 dialog = ExtResource( 2 )
-
-[node name="Left" parent="." index="0"]
-scale = Vector2( -1, 1 )

@@ -1,8 +1,12 @@
 extends Control
 
+export (AudioStream) var introMenuMusic
+export (AudioStream) var mainMenuMusic
+export (AudioManager.ELoopType) var music_loop_method
 export (Resource) var storyScene
 
 func _ready():
+	AudioManager.play_music([introMenuMusic, mainMenuMusic], music_loop_method)
 	if !Progress.isStageCompleted(1) && false :
 		$"ContentSafeZone/Menu buttons/Load".text = "Start Game"
 		$"ContentSafeZone/Menu buttons/New".hide()

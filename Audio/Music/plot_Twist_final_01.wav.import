@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/plot_Twist_final_01.wav-173526df08797dd22cfdab6e5bdb41aa.sample"
+
+[deps]
+
+source_file="res://Audio/Music/plot_Twist_final_01.wav"
+dest_files=[ "res://.import/plot_Twist_final_01.wav-173526df08797dd22cfdab6e5bdb41aa.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

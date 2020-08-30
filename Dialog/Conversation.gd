@@ -2,6 +2,7 @@ extends Control
 
 signal finished
 
+export (AudioStream) var music
 export (Resource) var dialog
 
 onready var left_character := $Left
@@ -9,6 +10,8 @@ onready var right_character := $Right
 onready var message_box := $Box
 
 func _ready() -> void:
+	if music :
+		AudioManager.play_music(music, AudioManager.ELoopType.LoopLast)
 	run_to_next_message()
 
 func run_to_next_message() -> void:

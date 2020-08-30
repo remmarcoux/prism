@@ -40,6 +40,7 @@ config/icon="res://icon.png"
 
 Progress="*res://system/progress.gd"
 StorySystem="*res://StorySystem/StorySystem.gd"
+AudioManager="*res://AudioManager/AudioManager.gd"
 
 [input]
 

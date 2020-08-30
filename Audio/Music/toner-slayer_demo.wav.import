@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/toner-slayer_demo.wav-51a7e04df9885ed1eabd078788008f99.sample"
+
+[deps]
+
+source_file="res://Audio/Music/toner-slayer_demo.wav"
+dest_files=[ "res://.import/toner-slayer_demo.wav-51a7e04df9885ed1eabd078788008f99.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

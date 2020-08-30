@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/minigame_action_FINAL.wav-9a3cee1b8e149e5fa8e3608f535b5716.sample"
+
+[deps]
+
+source_file="res://Audio/Music/minigame_action_FINAL.wav"
+dest_files=[ "res://.import/minigame_action_FINAL.wav-9a3cee1b8e149e5fa8e3608f535b5716.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
