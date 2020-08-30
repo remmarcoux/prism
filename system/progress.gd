@@ -1,7 +1,7 @@
 extends Node
 
 # Declare member variables here
-var initFile = "res://system/progress.json"
+var initFile = "res://system/progress_init.json"
 var usrFile = "user://data/progress.json"
 var data = {}
 
@@ -13,7 +13,13 @@ func _ready():
 func _load_game():
 	var file = File.new()
 	if not file.file_exists(usrFile):
-		file.open(initFile, File.READ)
+		var dir = Directory.new()
+		dir.open("user://")
+		if not dir.dir_exists("data"):
+			dir.make_dir("data")
+		
+		resetGame()
+		return
 	else:
 		file.open(usrFile, File.READ)
 	
@@ -28,9 +34,9 @@ func _save():
 	file.close()
 
 # Re-initialise to default value (start again mofo)
-func _resetGame():
+func resetGame():
 	var file = File.new()
-	file = file.open(initFile, File.READ)
+	file.open(initFile, File.READ)
 	data = parse_json(file.get_as_text())
 	file.close()
 	_save()
