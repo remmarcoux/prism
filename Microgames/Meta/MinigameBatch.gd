@@ -19,6 +19,7 @@ func load_game():
 
 func game_completed():
 	if index == gameList.size():
+		AudioManager.play_sfx("res://Audio/SFX/minigame-WIN_01.wav")
 		StorySystem._on_scene_done()
 	else:
 		load_game()

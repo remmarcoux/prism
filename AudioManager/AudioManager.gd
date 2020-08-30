@@ -14,10 +14,20 @@ func _ready():
 	_setup_audio_streams()
 
 func _setup_audio_streams():
-	currentStream = AudioStreamPlayer.new()
+	currentStream = _create_stream_player()
 	currentStream.connect("finished", self, "_play_next_or_loop")
 	currentStream.volume_db = -8
-	add_child(currentStream)
+
+func _create_sfx_player()-> AudioStreamPlayer:
+	var player = _create_stream_player()
+	player.connect("finished", player, "queue_free")
+	add_child(player)
+	return player
+
+func _create_stream_player() -> AudioStreamPlayer:
+	var player = AudioStreamPlayer.new()
+	add_child(player)
+	return player
 
 func play_music(streams, loopMethod:int):
 	if !streams :
@@ -29,6 +39,10 @@ func play_music(streams, loopMethod:int):
 	if streams is AudioStream:
 		musicStreams = []
 		_play_music_single(streams)
+
+func stop_music():
+	if currentStream :
+		currentStream.stop()
 
 func _play_music_list(streams:Array):
 	if currentStream.playing :
@@ -52,3 +66,18 @@ func _play_next_or_loop():
 		if musicLoopType == ELoopType.LoopAll :
 			musicStreams.push_back(musicStreams[0])
 		musicStreams.remove(0)
+
+func play_sfx(sfx):
+	if sfx is AudioStream:
+		_play_sfx_stream(sfx)
+	if sfx is String:
+		var sfxAsset = load(sfx)
+		if sfxAsset is AudioStream:
+			_play_sfx_stream(sfxAsset)
+		else:
+			printerr("Sfx " + sfx + " is not a valid audio stream")
+
+func _play_sfx_stream(sfx:AudioStream):
+	var player = _create_sfx_player()
+	player.stream = sfx
+	player.play(0)

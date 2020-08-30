@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/minigame-WIN_01.wav-7c6504be11d90da9502d3ae3bb336b00.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/minigame-WIN_01.wav"
+dest_files=[ "res://.import/minigame-WIN_01.wav-7c6504be11d90da9502d3ae3bb336b00.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
