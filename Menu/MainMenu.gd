@@ -1,6 +1,5 @@
 extends Control
 
-export (AudioStream) var buttonSfx
 export (AudioStream) var introMenuMusic
 export (AudioStream) var mainMenuMusic
 export (AudioManager.ELoopType) var music_loop_method
@@ -30,4 +29,4 @@ func _on_DeleteSavePopup_confirmed():
 	get_tree().change_scene_to(storyScene)
 
 func _play_menu_click_sfx():
-	AudioManager.play_sfx("res://Audio/SFX/menu_sfx_01_test.wav")
+	AudioManager.play_sfx("res://Audio/SFX/Menu_sfx_final.wav")

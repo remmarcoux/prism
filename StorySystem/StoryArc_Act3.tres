@@ -3,7 +3,7 @@
 [ext_resource path="res://StorySystem/StoryArc.gd" type="Script" id=1]
 [ext_resource path="res://Dialog/StoryArcs/story_arc1_scene1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Dialog/Conversation.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Microgames/Meta/MinigameBatch.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Microgames/_Levels/Playlists/Minigames_Hard.tscn" type="PackedScene" id=4]
 
 [resource]
 script = ExtResource( 1 )

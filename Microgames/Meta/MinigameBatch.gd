@@ -22,4 +22,5 @@ func game_completed():
 		AudioManager.play_sfx("res://Audio/SFX/minigame-WIN_01.wav")
 		StorySystem._on_scene_done()
 	else:
+		AudioManager.play_sfx("res://Audio/SFX/minigame_halfwin.wav")
 		load_game()

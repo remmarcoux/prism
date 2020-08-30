@@ -71,6 +71,7 @@ func setup_current_round() :
 	currentAnswer = []
 
 func start_simon_says_round(solution : Array, displayTime : float, playerReactionTime : float):
+	currentIndex = 0
 	roundState = ESimonsaysGameState.SimonTurn
 	roundDisplayTimer = displayTime
 	roundInputTimer = playerReactionTime

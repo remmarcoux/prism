@@ -1,0 +1,9 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Microgames/Meta/MinigameBatch.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Microgames/_Levels/Safe_Generic.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Microgames/_Levels/RunAway_Easy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Microgames/_Levels/SimonSays_Easy.tscn" type="PackedScene" id=5]
+
+[node name="MinigameBatch" instance=ExtResource( 1 )]
+gameList = [ ExtResource( 5 ), ExtResource( 3 ), ExtResource( 4 ) ]

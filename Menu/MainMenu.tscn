@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Menu/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Menu/ButtonTheme.tres" type="Theme" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://Fonts/MomTypewriter36.tres" type="DynamicFont" id=5]
 [ext_resource path="res://Audio/Music/LOOP_intro_FINAL.wav" type="AudioStream" id=6]
 [ext_resource path="res://Audio/Music/progressive_intro_FINAL_02.wav" type="AudioStream" id=7]
-[ext_resource path="res://Audio/SFX/menu_sfx_01_test.wav" type="AudioStream" id=8]
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -16,7 +15,6 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-buttonSfx = ExtResource( 8 )
 introMenuMusic = ExtResource( 7 )
 mainMenuMusic = ExtResource( 6 )
 music_loop_method = 1
