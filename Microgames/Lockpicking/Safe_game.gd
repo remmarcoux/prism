@@ -27,3 +27,14 @@ func format_time():
 
 func _on_EndTimer_timeout():
 	emit_signal("completed")
+
+
+func _on_Safe_click(index):
+	$CanvasLayer.get_node("Click"+str(index)).show()
+	$CanvasLayer/Timer.start()
+
+
+func _on_Timer_timeout():
+	for c in $CanvasLayer.get_children():
+		if c is Label:
+			c.hide()

@@ -1,6 +1,7 @@
 extends Node2D
 
 signal safe_opened
+signal click(index)
 
 onready var handle = $Handle
 onready var knob = $Knob
@@ -29,6 +30,7 @@ func check_for_pin() -> void:
 		var distance_to_pin = abs(knob.rotation_degrees - combination[current_unlocked])
 		if distance_to_pin < pin_range:
 			print("Click on !" + str(current_unlocked))
+			emit_signal("click", current_unlocked)
 			$AudioStreamPlayer.stream = load("res://Microgames/Lockpicking/click_cadena_01.wav")
 			$AudioStreamPlayer.play()
 			current_unlocked += 1
