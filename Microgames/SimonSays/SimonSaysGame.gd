@@ -112,8 +112,7 @@ func process_player_round(delta:float):
 	currentTimer += delta
 	masterTimer -= delta
 	if masterTimer < 0:
-		emit_signal("failed")
-		roundState = ESimonsaysGameState.Loose
+		on_loose()
 		return
 	
 	if currentTimer >= roundInputTimer:
@@ -155,6 +154,15 @@ func process_win(delta:float):
 func process_loose(delta:float):
 	pass
 
+
+func on_win():
+	emit_signal("completed")
+
+func on_loose():
+	emit_signal("failed")
+	$Timer.hide()
+	roundState = ESimonsaysGameState.Loose
+
 func on_wrong_answer():
 	# TODO: Negative Feedback
 	currentAnswer.clear()
@@ -164,7 +172,7 @@ func on_wrong_answer():
 
 func on_correct_answer():
 	# TODO: Positive Feedback
-	emit_signal("completed")
+	on_win()
 
 func update_display_from_inputs():
 	set_highlight(process_key_down())
