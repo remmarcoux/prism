@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Microgames/Meta/MinigameBatch.gd" type="Script" id=1]
-[ext_resource path="res://Microgames/Lockpicking/Safe_Microgame.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Microgames/_Levels/Safe_Generic.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Audio/Music/minigame_action_FINAL.wav" type="AudioStream" id=3]
 
 [node name="MinigameBatch" type="Node"]

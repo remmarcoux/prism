@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Microgames/Floppy/Floppy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Microgames/Microgame.tscn" type="PackedScene" id=2]
+
+[node name="Microgame" instance=ExtResource( 2 )]
+game_title = "FLOPPY"
+game_rules = "Not flappy"
+
+[node name="Floppy" parent="GameContainer" index="0" instance=ExtResource( 1 )]
+gravity = 300.0
+[connection signal="game_lost" from="GameContainer/Floppy" to="." method="fail_game"]
+[connection signal="game_won" from="GameContainer/Floppy" to="." method="complete_game"]

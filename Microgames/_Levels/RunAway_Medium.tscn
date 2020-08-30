@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Microgames/RunAway/RunAway.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Microgames/Microgame.tscn" type="PackedScene" id=2]
+
+[node name="Microgame" instance=ExtResource( 2 )]
+game_title = "It's Gonna Blow! (medium)"
+game_rules = "Run away from the explosion using the left and right buttons"
+
+[node name="GameContainer" parent="." index="0"]
+margin_left = -512.0
+margin_top = -300.0
+margin_right = -512.0
+margin_bottom = -300.0
+
+[node name="RunAway" parent="GameContainer" index="0" instance=ExtResource( 1 )]
+progressPerInputs = 2.5
+startsActive = false
+[connection signal="completed" from="GameContainer/RunAway" to="." method="complete_game"]
+[connection signal="failed" from="GameContainer/RunAway" to="." method="fail_game"]

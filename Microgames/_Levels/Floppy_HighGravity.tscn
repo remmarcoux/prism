@@ -8,5 +8,6 @@ game_title = "FLOPPY"
 game_rules = "Not flappy"
 
 [node name="Floppy" parent="GameContainer" index="0" instance=ExtResource( 1 )]
+gravity = 1000.0
 [connection signal="game_lost" from="GameContainer/Floppy" to="." method="fail_game"]
 [connection signal="game_won" from="GameContainer/Floppy" to="." method="complete_game"]
