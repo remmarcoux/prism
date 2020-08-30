@@ -66,6 +66,13 @@ func completeStage(stageID):
 			_save()
 			return
 
+func isStageCompleted(stageID) -> bool:
+	for i in range(data.size()):
+		if stageID == data[i].id:
+			return data[i].isCompleted
+	
+	return false
+
 # Check if you have "x" item in your inventory, can be an array
 func hasItems(items):
 	if typeof(items) == TYPE_STRING: items = [items]

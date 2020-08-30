@@ -4,7 +4,9 @@ export (PackedScene) var loadGameNodePath
 export (PackedScene) var newGameNodePath
 
 func _ready():
-	pass
+	if !Progress.isStageCompleted(1):
+		$"ContentSafeZone/Menu buttons/Load".text = "Start Game"
+		$"ContentSafeZone/Menu buttons/New".hide()
 
 func _on_Load_pressed():
 	get_tree().change_scene_to(loadGameNodePath)
