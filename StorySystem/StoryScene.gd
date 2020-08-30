@@ -30,5 +30,5 @@ func _load_current_story_scene():
 
 func _clear_current():
 	if currentScene != null:
-		remove_child(currentScene)
+		currentScene.queue_free()
 		currentScene = null
