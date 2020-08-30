@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Dialog/MessageBox.gd" type="Script" id=1]
 [ext_resource path="res://Dialog/box.png" type="Texture" id=2]
+[ext_resource path="res://Fonts/BankPrinter.tres" type="DynamicFont" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "write"
@@ -40,6 +41,7 @@ margin_left = 12.0
 margin_top = 12.0
 margin_right = -12.0
 margin_bottom = -12.0
+custom_fonts/normal_font = ExtResource( 3 )
 bbcode_enabled = true
 scroll_following = true
 __meta__ = {
