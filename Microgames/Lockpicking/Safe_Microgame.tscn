@@ -10,3 +10,4 @@ game_title = "The Safe"
 game_rules = "Quickly unlock the safe!"
 
 [node name="Safe_game" parent="GameContainer" index="0" instance=ExtResource( 2 )]
+[connection signal="completed" from="GameContainer/Safe_game" to="." method="_on_Safe_game_completed"]
