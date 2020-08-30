@@ -1,4 +1,7 @@
-extends microgame
+extends Node2D
+
+signal completed
+signal failed
 
 enum ESimonsaysGameState {
 	PreGame,
@@ -110,6 +113,7 @@ func process_player_round(delta:float):
 	masterTimer -= delta
 	if masterTimer < 0:
 		emit_signal("failed")
+		roundState = ESimonsaysGameState.Loose
 		return
 	
 	if currentTimer >= roundInputTimer:
