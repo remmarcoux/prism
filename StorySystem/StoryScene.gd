@@ -10,7 +10,6 @@ func _ready():
 func _load_story_from_save():
 	var stageData = Progress.getFirstIncompleteStage()
 	_load_story(stageData.path)
-	_load_story(stageData.path)
 
 func _load_story(story_path:String):
 	story_resource = load(story_path)

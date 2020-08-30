@@ -132,10 +132,7 @@ func process_player_round(delta:float):
 			on_wrong_answer()
 			return
 	
-	if currentAnswer.size() == roundSolution.size():
-		roundState = ESimonsaysGameState.Win
-	else:
-		on_correct_answer()
+	on_correct_answer()
 
 func process_wrong_answer(delta:float):
 	currentPauseTimer -= delta
@@ -172,7 +169,9 @@ func on_wrong_answer():
 
 func on_correct_answer():
 	# TODO: Positive Feedback
-	on_win()
+	if currentAnswer.size() == roundSolution.size():
+		roundState = ESimonsaysGameState.Win
+		emit_signal("completed")
 
 func update_display_from_inputs():
 	set_highlight(process_key_down())
