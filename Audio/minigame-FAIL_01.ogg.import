@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/minigame-FAIL_01.ogg-53933fcb9e32977c1fccb71f480b75fa.oggstr"
+
+[deps]
+
+source_file="res://Audio/minigame-FAIL_01.ogg"
+dest_files=[ "res://.import/minigame-FAIL_01.ogg-53933fcb9e32977c1fccb71f480b75fa.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

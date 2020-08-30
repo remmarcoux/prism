@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/minigame-WIN_01.ogg-58000b40a420c5849b5528fdea04f381.oggstr"
+
+[deps]
+
+source_file="res://Audio/minigame-WIN_01.ogg"
+dest_files=[ "res://.import/minigame-WIN_01.ogg-58000b40a420c5849b5528fdea04f381.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
