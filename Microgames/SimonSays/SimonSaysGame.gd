@@ -1,4 +1,4 @@
-extends Node2D
+extends microgame
 
 enum ESimonsaysGameState {
 	PreGame,
@@ -9,8 +9,8 @@ enum ESimonsaysGameState {
 	Loose,
 }
 
-export (int) var numberOfSteps:int
-export (float) var playerReactionTimeLimit:float
+export (int) var numberOfSteps : int
+export (float) var playerReactionTimeLimit : float
 export (float) var roundPauseTimer : float = 0.1
 export (float) var displayTime : float = 0.5
 
@@ -24,6 +24,8 @@ var roundSolution : Array
 var roundDisplayTimer : float
 var roundInputTimer : float
 
+var masterTimer : float
+
 var currentIndex : int
 var currentTimer : float
 var currentPauseTimer : float
@@ -31,11 +33,14 @@ var currentAnswer : Array
 
 func _ready():
 	reset_minigame()
+
+func _start():
 	start_simon_says_round(GenerateSolution(numberOfSteps), displayTime, playerReactionTimeLimit)
 
 func _process(delta:float):
+	$Timer.text = format_time()
 	match roundState:
-		ESimonsaysGameState.PreGame : return
+		ESimonsaysGameState.PreGame : process_pregame(delta)
 		ESimonsaysGameState.SimonTurn: process_simon_round(delta)
 		ESimonsaysGameState.PlayerTurn: process_player_round(delta)
 		ESimonsaysGameState.WrongAnswer: process_wrong_answer(delta)
@@ -67,7 +72,12 @@ func start_simon_says_round(solution : Array, displayTime : float, playerReactio
 	roundDisplayTimer = displayTime
 	roundInputTimer = playerReactionTime
 	roundSolution = solution
+	masterTimer = roundInputTimer
 	set_highlight(roundSolution[currentIndex])
+
+func process_pregame(delta:float):
+	if Input.is_action_pressed("ui_select"):
+		_start()
 
 func process_simon_round(delta:float):
 	if currentTimer == 0.0 && currentPauseTimer == roundPauseTimer :
@@ -97,6 +107,11 @@ func process_player_round(delta:float):
 		return
 		
 	currentTimer += delta
+	masterTimer -= delta
+	if masterTimer < 0:
+		emit_signal("failed")
+		return
+	
 	if currentTimer >= roundInputTimer:
 		on_wrong_answer()
 		return
@@ -145,11 +160,18 @@ func on_wrong_answer():
 
 func on_correct_answer():
 	# TODO: Positive Feedback
-	pass
+	emit_signal("completed")
 
 func update_display_from_inputs():
 	set_highlight(process_key_down())
-	
+
+func to_double_digits(number: int) -> String:
+	return str(number) if number >= 10 else "0" + str(number)
+
+func format_time():
+	var seconds : int = masterTimer
+	var minutes : int = seconds / 60
+	return to_double_digits(minutes) + " : " + to_double_digits(seconds % 60)
 
 func set_highlight(index:int):
 		var i:int = 0
