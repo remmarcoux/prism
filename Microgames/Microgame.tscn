@@ -1,0 +1,126 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Microgames/Microgame.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/Mom«t___.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Fonts/CheapInkTitle.tres" type="DynamicFont" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "GameStart"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 2.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1024, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1024, 0 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 2.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "start"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("GameContainer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 2.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "show"
+} ]
+}
+
+[node name="Microgame" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+game_title = "SUCK THAT DICK"
+game_rules = "I AM A NINJA WAIFU"
+
+[node name="GameContainer" type="Control" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1024.0
+margin_right = -1024.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 50.0
+margin_top = 50.0
+margin_right = -50.0
+margin_bottom = -50.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="RichTextLabel" parent="Control/VBoxContainer"]
+margin_top = 198.0
+margin_right = 924.0
+margin_bottom = 248.0
+rect_min_size = Vector2( 0, 50 )
+custom_fonts/normal_font = ExtResource( 3 )
+bbcode_enabled = true
+bbcode_text = "[center] LONG LIVE THE QUEEN"
+text = " LONG LIVE THE QUEEN"
+scroll_active = false
+
+[node name="Description" type="RichTextLabel" parent="Control/VBoxContainer"]
+margin_top = 252.0
+margin_right = 924.0
+margin_bottom = 302.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_stretch_ratio = 2.0
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.333333, 0.890196, 0.694118, 1 )
+bbcode_enabled = true
+bbcode_text = "[center] Don't spill that tea until the queen is here!"
+text = " Don't spill that tea until the queen is here!"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "GameStart"
+anims/GameStart = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 512, 300 )
+current = true

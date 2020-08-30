@@ -13,15 +13,25 @@ _global_script_classes=[ {
 "class": "Dialog",
 "language": "GDScript",
 "path": "res://Dialog/Dialog.gd"
+}, {
+"base": "Node",
+"class": "microgame",
+"language": "GDScript",
+"path": "res://Microgames/Microgame.gd"
 } ]
 _global_script_class_icons={
-"Dialog": ""
+"Dialog": "",
+"microgame": ""
 }
 
 [application]
 
 config/name="Prism"
 config/icon="res://icon.png"
+
+[autoload]
+
+Progress="*res://system/progress.gd"
 
 [input]
 
@@ -53,10 +63,6 @@ ui_down={
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"unicode":0,"echo":false,"script":null)
  ]
 }
-
-[autoload]
-
-Progress="*res://system/progress.gd"
 
 [rendering]
 
