@@ -1,0 +1,80 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Menu/ButtonTheme.tres" type="Theme" id=1]
+[ext_resource path="res://Menu/MainMenu.gd" type="Script" id=2]
+[ext_resource path="res://Dialog/Conversation.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Dialog/MessageBox.tscn" type="PackedScene" id=4]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+loadGameNodePath = ExtResource( 3 )
+newGameNodePath = ExtResource( 4 )
+
+[node name="Background" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ContentSafeZone" type="Control" parent="."]
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="ContentSafeZone"]
+anchor_left = 0.33
+anchor_right = 0.66
+anchor_bottom = 0.25
+text = "Some Printer Pun Title"
+align = 1
+valign = 1
+
+[node name="Menu buttons" type="HBoxContainer" parent="ContentSafeZone"]
+anchor_left = 0.1
+anchor_top = 0.95
+anchor_right = 0.9
+anchor_bottom = 1.0
+custom_constants/separation = 25
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Load" type="Button" parent="ContentSafeZone/Menu buttons"]
+margin_left = 210.0
+margin_right = 277.0
+margin_bottom = 24.0
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource( 1 )
+text = "Continue"
+
+[node name="New" type="Button" parent="ContentSafeZone/Menu buttons"]
+margin_left = 302.0
+margin_right = 382.0
+margin_bottom = 24.0
+mouse_default_cursor_shape = 2
+theme = ExtResource( 1 )
+text = "New Game"
+
+[node name="Quit" type="Button" parent="ContentSafeZone/Menu buttons"]
+margin_left = 407.0
+margin_right = 445.0
+margin_bottom = 24.0
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource( 1 )
+text = "Quit"
+[connection signal="pressed" from="ContentSafeZone/Menu buttons/Load" to="." method="_on_Load_pressed"]
+[connection signal="pressed" from="ContentSafeZone/Menu buttons/New" to="." method="_on_New_pressed"]
+[connection signal="pressed" from="ContentSafeZone/Menu buttons/Quit" to="." method="_on_Quit_pressed"]

@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Fonts/CheapInk.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonts/F25_Bank_Printer.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Fonts/MomTypewriter36.tres" type="DynamicFont" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 36
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+font_data = ExtResource( 2 )
+
+[node name="FontDisplay" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = -20.0
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheapInk" type="Label" parent="Control"]
+margin_top = 45.0
+margin_right = 984.0
+margin_bottom = 140.0
+size_flags_vertical = 6
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Cheap Ink
+The quick brown fox jumps over the lazy dog"
+align = 1
+
+[node name="MomTypewritter" type="Label" parent="Control"]
+margin_top = 233.0
+margin_right = 984.0
+margin_bottom = 324.0
+size_flags_vertical = 6
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Mom's Typewriter
+The quick brown fox jumps over the lazy dog"
+align = 1
+
+[node name="BankPrinter" type="Label" parent="Control"]
+margin_top = 432.0
+margin_right = 984.0
+margin_bottom = 499.0
+size_flags_vertical = 6
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Bank Printer
+The quick brown fox jumps over the lazy dog"
+align = 1
