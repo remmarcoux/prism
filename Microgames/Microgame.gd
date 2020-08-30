@@ -14,3 +14,9 @@ func _ready():
 func start():
 	propagate_call("_start")
 	pass
+
+func complete_game() -> void:
+	emit_signal("completed")
+
+func fail_game() -> void:
+	emit_signal("failed")

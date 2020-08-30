@@ -1,25 +1,102 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Microgames/Dodge/Slider.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
-
+[ext_resource path="res://Microgames/Dodge/Dodge.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 30, 30 )
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="Animation" id=2]
+resource_name = "airplanes"
+length = 5.5
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.4, 1.1, 1.6, 2.1, 2.5, 2.9, 3.5, 3.8, 4.1, 4.4, 4.6, 4.8, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "spawn_airplane"
+}, {
+"args": [  ],
+"method": "spawn_airplane"
+}, {
+"args": [  ],
+"method": "spawn_airplane"
+}, {
+"args": [  ],
+"method": "spawn_airplane"
+}, {
+"args": [  ],
+"method": "spawn_airplane"
+}, {
+"args": [  ],
+"method": "spawn_airplane"
+}, {
+"args": [  ],
+"method": "spawn_airplane"
+}, {
+"args": [  ],
+"method": "spawn_airplane"
+}, {
+"args": [  ],
+"method": "spawn_airplane"
+}, {
+"args": [  ],
+"method": "spawn_airplane"
+}, {
+"args": [  ],
+"method": "spawn_airplane"
+}, {
+"args": [  ],
+"method": "spawn_airplane"
+}, {
+"args": [  ],
+"method": "spawn_airplane"
+} ]
+}
 
-[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
-position = Vector2( 515.902, 292.574 )
+[sub_resource type="Animation" id=3]
+resource_name = "death"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0.12549, 0.12549, 1 ), Color( 0.188235, 0.0313726, 0.0313726, 1 ) ]
+}
+
+[node name="Dodge" type="Node2D"]
+script = ExtResource( 3 )
+spawn_distance = 400.0
+
+[node name="PlaneContainer" type="Node2D" parent="."]
+
+[node name="Player" type="KinematicBody2D" parent="."]
+position = Vector2( 512, 300 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
+speed = 300
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+[node name="Sprite" type="Sprite" parent="Player"]
 texture = ExtResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/airplanes = SubResource( 2 )
+anims/death = SubResource( 3 )
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
