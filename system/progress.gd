@@ -77,10 +77,11 @@ func hasItems(items):
 
 # Add a new item to the inventory. Sucks if you already have it
 func addToInventory(item):
-	if hasItems(item): return
+	if inventory.find(item) != -1: return
 	inventory.push_back(item)
 	_save()
 
+# Remove an existing item from the inventory
 func removeFromInventory(item):
 	var i = inventory.find(item)
 	if i == -1 : return

@@ -84,5 +84,10 @@ texture = ExtResource( 4 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D/PathFollow2D"]
 autoplay = "movement"
 anims/movement = SubResource( 2 )
+
+[node name="EndTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
 [connection signal="safe_opened" from="Safe" to="." method="_on_Safe_safe_opened"]
 [connection signal="pressed" from="Button" to="Safe" method="reset_safe"]
+[connection signal="timeout" from="EndTimer" to="." method="_on_EndTimer_timeout"]
