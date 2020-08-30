@@ -67,11 +67,19 @@ func completeStage(stageID):
 			return
 
 func isStageCompleted(stageID) -> bool:
+	if !(data is Array) :
+		return false
 	for i in range(data.size()):
 		if stageID == data[i].id:
 			return data[i].isCompleted
-	
 	return false
+
+func getFirstIncompleteStage() -> Dictionary:
+	for i in range(data.size()):
+		if !data[i].isCompleted:
+			return data[i]
+	print_debug("No incomplete node found... Returning first node")
+	return data[0]
 
 # Check if you have "x" item in your inventory, can be an array
 func hasItems(items):

@@ -17,6 +17,6 @@ func load_game():
 
 func game_completed():
 	if index == gameList.size():
-		pass #You win, yay!
+		StorySystem._on_scene_done()
 	else:
 		load_game()

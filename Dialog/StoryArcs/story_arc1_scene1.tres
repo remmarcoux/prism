@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Dialog/Dialog.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+events = [ "#left:Assets/Sprites/Cartridge Black.png", "This is the first story arc and I'm already tired", "#right:Assets/Sprites/Cartridge Yellow.png", "Oh come on, don't be like that!
+Besides everything here is fun! Weeeee!", "#right:", "He's gone... Finally" ]

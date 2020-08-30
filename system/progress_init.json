@@ -1,27 +1,20 @@
 [
   {
     "id": 1,
-    "name": "The Perfect Color",
-    "isCompleted": false
+    "name": "The Small Prints",
+    "isCompleted": false,
+    "path": "res://StorySystem/StoryArc_Act1.tres"
   },
   {
     "id": 2,
-    "name": "Missing Cyan",
-    "isCompleted": false
+    "name": "Due Process",
+    "isCompleted": false,
+    "path": "res://StorySystem/StoryArc_Act2.tres"
   },
   {
     "id": 3,
-    "name": "Black Stain",
-    "isCompleted": false
-  },
-  {
-    "id": 4,
-    "name": "Not Enough Paper",
-    "isCompleted": false
-  },
-  {
-    "id": 5,
-    "name": "End of Toner",
-    "isCompleted": false
+    "name": "Paper Jam",
+    "isCompleted": false,
+    "path": "res://StorySystem/StoryArc_Act3.tres"
   }
 ]

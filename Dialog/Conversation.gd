@@ -29,4 +29,5 @@ func _on_Box_next_message_requested() -> void:
 	if dialog.next():
 		run_to_next_message()
 	else:
+		StorySystem._on_scene_done()
 		emit_signal("finished")
