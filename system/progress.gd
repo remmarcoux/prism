@@ -3,7 +3,7 @@ extends Node
 # Declare member variables here
 var initFile = "res://system/progress_init.json"
 var usrFile = "user://data/progress.json"
-var data = {}
+var data = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -42,7 +42,7 @@ func resetGame():
 	_save()
 
 func completeStage(stageID):
-	for i in data:
+	for i in range(data.size()):
 		if stageID == data[i].id:
 			data[i].isCompleted = true
 			_save()
