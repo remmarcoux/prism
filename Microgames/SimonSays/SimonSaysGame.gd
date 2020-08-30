@@ -9,16 +9,20 @@ enum ESimonsaysGameState {
 	Loose,
 }
 
-onready var displayNodes : Array = [$Up, $Left, $Down, $Right]
+export (int) var numberOfSteps:int
+export (float) var playerReactionTimeLimit:float
+export (float) var roundPauseTimer : float = 0.1
+export (float) var displayTime : float = 0.5
 
-var animTimer : float = 0.25
+export (float) var animTimer : float = 0.25
+
+onready var displayNodes : Array = [$Up, $Left, $Down, $Right]
 
 var roundState : int
 
 var roundSolution : Array
 var roundDisplayTimer : float
 var roundInputTimer : float
-var roundPauseTimer : float = 0.1
 
 var currentIndex : int
 var currentTimer : float
@@ -27,7 +31,7 @@ var currentAnswer : Array
 
 func _ready():
 	reset_minigame()
-	start_simon_says_round(GenerateSolution(6), 0.5, 10.0)
+	start_simon_says_round(GenerateSolution(numberOfSteps), displayTime, playerReactionTimeLimit)
 
 func _process(delta:float):
 	match roundState:
