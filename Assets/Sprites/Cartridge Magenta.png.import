@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Cartridge Black.png-585b76eef2af6d02baa8ec725948d2fc.stex"
+path="res://.import/Cartridge Magenta.png-447017793adfc1952f2c5a99879e85b4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cartridge Black.png"
-dest_files=[ "res://.import/Cartridge Black.png-585b76eef2af6d02baa8ec725948d2fc.stex" ]
+source_file="res://Assets/Sprites/Cartridge Magenta.png"
+dest_files=[ "res://.import/Cartridge Magenta.png-447017793adfc1952f2c5a99879e85b4.stex" ]
 
 [params]
 

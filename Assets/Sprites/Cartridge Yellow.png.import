@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Cartridge Yellow.png-079d790adfe8d98cef047e3ce4589a02.stex"
+path="res://.import/Cartridge Yellow.png-d7f8121f80c4d05941fd997d15d03529.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cartridge Yellow.png"
-dest_files=[ "res://.import/Cartridge Yellow.png-079d790adfe8d98cef047e3ce4589a02.stex" ]
+source_file="res://Assets/Sprites/Cartridge Yellow.png"
+dest_files=[ "res://.import/Cartridge Yellow.png-d7f8121f80c4d05941fd997d15d03529.stex" ]
 
 [params]
 
