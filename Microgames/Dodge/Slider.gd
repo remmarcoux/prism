@@ -8,6 +8,8 @@ enum ControlType {
 }
 export(ControlType) var control_type := ControlType.Keys
 
+var is_alive := false
+
 func _process(delta: float) -> void:
 	var move = Vector2.ZERO
 	match control_type:
@@ -15,7 +17,7 @@ func _process(delta: float) -> void:
 			move = process_keys()
 		ControlType.Mouse:
 			move = process_mouse()
-	if move:
+	if move and is_alive:
 		move_and_slide(move.normalized() * speed)
 
 func process_keys() -> Vector2:
