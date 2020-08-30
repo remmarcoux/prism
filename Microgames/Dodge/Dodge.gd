@@ -1,7 +1,6 @@
 extends Node2D
 
 const Airplane = preload("res://Microgames/Dodge/Airplane.tscn")
-const center = Vector2(512, 300)
 
 signal game_lost
 signal game_won
@@ -12,6 +11,7 @@ export (bool) var retry_on_death := true
 onready var container = $PlaneContainer
 onready var animator = $AnimationPlayer
 onready var player = $Player
+onready var center = Vector2(0, 0) if owner else Vector2(512, 300)
 
 func _ready() -> void:
 	if not owner:

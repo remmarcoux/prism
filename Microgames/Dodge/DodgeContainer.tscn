@@ -7,12 +7,6 @@
 game_title = "FEET ON THE GROUND"
 game_rules = "Avoid paper planes"
 
-[node name="GameContainer" parent="." index="0"]
-margin_left = -512.0
-margin_top = -300.0
-margin_right = -512.0
-margin_bottom = -300.0
-
 [node name="Dodge" parent="GameContainer" index="0" instance=ExtResource( 2 )]
 [connection signal="game_lost" from="GameContainer/Dodge" to="." method="fail_game"]
 [connection signal="game_won" from="GameContainer/Dodge" to="." method="complete_game"]

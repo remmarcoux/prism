@@ -83,7 +83,6 @@ spawn_distance = 400.0
 [node name="PlaneContainer" type="Node2D" parent="."]
 
 [node name="Player" type="KinematicBody2D" parent="."]
-position = Vector2( 512, 300 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
