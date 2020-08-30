@@ -38,3 +38,16 @@ frames = SubResource( 1 )
 position = Vector2( 488.47, 422.806 )
 rotation = -3.14159
 frames = SubResource( 1 )
+
+[node name="Timer" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 464.386
+margin_top = 30.9194
+margin_right = 500.386
+margin_bottom = 44.9194
+text = "00:00"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
