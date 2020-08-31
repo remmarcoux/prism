@@ -1,0 +1,79 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/Background/DESK_BACKGROUND.png" type="Texture" id=1]
+[ext_resource path="res://PointAndClick/Point&Click.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 38.6801, 42.6928 )
+
+[sub_resource type="CapsuleShape2D" id=2]
+height = 369.974
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 84.0726, 60.2344 )
+
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 28.1771
+height = 141.41
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 80.983, 46.8556 )
+
+[node name="Office" type="Sprite"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Safe" type="Area2D" parent="."]
+position = Vector2( 224.492, 200.921 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Safe"]
+shape = SubResource( 1 )
+
+[node name="Ladder" type="Area2D" parent="."]
+position = Vector2( 394.539, -125.535 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ladder"]
+position = Vector2( -4.96851, 19.0488 )
+rotation = 0.240755
+shape = SubResource( 2 )
+
+[node name="Monitor" type="Area2D" parent="."]
+position = Vector2( -326.28, 12.0128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Monitor"]
+rotation = -0.158466
+shape = SubResource( 3 )
+
+[node name="Keyboard" type="Area2D" parent="."]
+position = Vector2( -259.039, 170.574 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Keyboard"]
+rotation = 1.0472
+shape = SubResource( 4 )
+
+[node name="Bookcase" type="Area2D" parent="."]
+position = Vector2( -22.0367, -171.961 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bookcase"]
+shape = SubResource( 5 )
+[connection signal="input_event" from="Safe" to="." method="_on_Safe_input_event"]
+[connection signal="input_event" from="Ladder" to="." method="_on_Ladder_input_event"]
+[connection signal="input_event" from="Monitor" to="." method="_on_Monitor_input_event"]
+[connection signal="input_event" from="Keyboard" to="." method="_on_Keyboard_input_event"]
+[connection signal="input_event" from="Bookcase" to="." method="_on_Bookcase_input_event"]
