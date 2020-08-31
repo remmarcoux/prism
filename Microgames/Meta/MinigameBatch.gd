@@ -1,7 +1,7 @@
 extends Node
 
-export (AudioStream) var music
-export(Array, PackedScene) var gameList : Array
+export (Array, AudioStream) var music
+export (Array, PackedScene) var gameList : Array
 
 var index = 0
 

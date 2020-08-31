@@ -6,5 +6,5 @@
 
 [node name="MinigameBatch" type="Node"]
 script = ExtResource( 1 )
-music = ExtResource( 3 )
+music = [ ExtResource( 3 ) ]
 gameList = [ ExtResource( 2 ) ]
