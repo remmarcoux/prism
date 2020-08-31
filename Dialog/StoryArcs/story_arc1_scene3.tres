@@ -1,7 +1,0 @@
-[gd_resource type="Resource" load_steps=2 format=2]
-
-[ext_resource path="res://Dialog/Dialog.gd" type="Script" id=1]
-
-[resource]
-script = ExtResource( 1 )
-events = [ "#left:Assets/Sprites/Cartridge Black.png", "#right:Assets/Sprites/Cartridge Yellow.png", "Well That was weird...", "Right?", "#right:Assets/Sprites/Cartridge Magenta.png", "Oh silly y'alls, it was fun!", "#left:", "Hey wait for us!", "#right:" ]

@@ -16,12 +16,15 @@ music = ExtResource( 4 )
 dialog = ExtResource( 3 )
 
 [node name="Left" type="Sprite" parent="."]
-position = Vector2( 256, 192 )
+position = Vector2( 256, 220 )
 scale = Vector2( -1, 1 )
 
 [node name="Right" type="Sprite" parent="."]
-position = Vector2( 768, 192 )
+position = Vector2( 768, 220 )
 
 [node name="Box" parent="." instance=ExtResource( 2 )]
+anchor_left = 0.1
 anchor_top = 0.6
+anchor_right = 0.9
+anchor_bottom = 0.9
 [connection signal="next_message_requested" from="Box" to="." method="_on_Box_next_message_requested"]

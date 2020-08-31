@@ -1,0 +1,7 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Dialog/Dialog.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+events = [ "#right:Assets/Sprites/Cartridge Black.png", "K: ...", "???: Big K", "#left:Assets/Sprites/Printer 1.png", "You’ve got some explaining to do!", "I’ve found your prints all over this notebook and it’s filled with evidence that you wanted to kidnap Cyan!", "What do you have to say for yourself, traitor?", "K: Woah hey there what? ", "Nah man I was busy all day and all night doing my gawd-darned job!", "These other carts are never doing their part and now you come at me all angry and accuse me? YOU have some explaining to do man", "HP: I’m trying to save Cyan, so tell me where the hell you were all day, since you just got in here!", "K: Doing my job, man! I was up all night.", "HP: Anyone can confirm that alibi?", "K: I guess not, no", "HP: Awfully convenient...", "K: Alright man, look, I ain’t getting nowhere. Have a look around and if you really need me for something, I’ll follow.", "#right:", "HP: Having a look around... That might actually be a good idea.", "" ]

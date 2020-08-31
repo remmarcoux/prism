@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource( 1 )
-events = [ "#left:Assets/Sprites/Cartridge Black.png", "This is the first story arc and I'm already tired", "#right:Assets/Sprites/Cartridge Yellow.png", "Oh come on, don't be like that!
-Besides everything here is fun! Weeeee!", "#right:", "He's gone... Finally" ]
+events = [ "I was always the star of the show, and I never played by the rules.", "#right:Assets/Sprites/Printer 1.png", "Name’s Henry Prynt, but everyone calls me HP. And when the Boss needs something printed, that’s when they call on me and my crew, Mag, Y, big K and Cyan. We work as a team, they provide everything I need and then I produce that crisp high-quality product that the Boss loves.
+", "But tonight is different. Boss needs something quick, but the crew is broken.", "Cyan has gone missing.", "I need to find out what’s going on in this office and quick. Good for me… I can smell fear.", "#right:", "..." ]

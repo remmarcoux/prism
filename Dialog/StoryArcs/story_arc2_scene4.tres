@@ -1,0 +1,7 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Dialog/Dialog.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+events = [ "#left:Assets/Sprites/Printer 1.png", "HP: It seems like someone left in a hurry and hid some evidence here, probably hoping to come and get it back later…", "Hm? A notebook?", "With a black stain on it...", "Oh no... ", "Could it really be?", "#left:" ]

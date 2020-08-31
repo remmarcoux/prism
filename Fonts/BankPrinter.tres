@@ -4,4 +4,5 @@
 font_path = "res://Fonts/F25_Bank_Printer.ttf"
 
 [resource]
+extra_spacing_top = 12
 font_data = SubResource( 1 )

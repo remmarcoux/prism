@@ -1,0 +1,7 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Dialog/Dialog.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+events = [ "#left:Assets/Sprites/Printer 1.png", "HP: Huh… looks like someone wanted to meet her down at the supply cabinet an hour ago...to talk about a business opportunity in Nigeria", "...", "#right:Assets/Sprites/Tony the Toner.png", "Tony the Toner: My boy, do ye think this is the way to act? Sneaking into people’s mails like ye own the place.", "Don’t ye think ye should look into these snarky colored pencils, always angry at us printing supplies?", "Trying to take back the jobs we were rightfully given?", "...", "Their office is in the supply closet, if ye want to have a look.", "HP: Oh, Tony! Huh... Interesting theory, I guess I should investigate then!", "#left:", "Tony the Toner: ...", "#right:", "" ]
