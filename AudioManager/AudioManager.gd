@@ -21,7 +21,6 @@ func _setup_audio_streams():
 func _create_sfx_player()-> AudioStreamPlayer:
 	var player = _create_stream_player()
 	player.connect("finished", player, "queue_free")
-	add_child(player)
 	return player
 
 func _create_stream_player() -> AudioStreamPlayer:
